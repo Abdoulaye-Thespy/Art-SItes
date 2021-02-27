@@ -2,7 +2,7 @@
 class ArtPlacesController < ApplicationController
   before_action :set_artplace, only: [:show, :update, :destroy]
 
-  # GET /artplace
+  # GET /artplaces
   def index
     @artplaces = ArtPlace.all
     json_response(@artplaces)
@@ -14,18 +14,18 @@ class ArtPlacesController < ApplicationController
     json_response(@artplace, :created)
   end
 
-  # GET /artplace/:id
+  # GET /artplaces/:id
   def show
     json_response(@artplace)
   end
 
-  # PUT /todos/:id
+  # PUT /artplaces/:id
   def update
     @artplace.update(artplace_params)
     head :no_content
   end
 
-  # DELETE /todos/:id
+  # DELETE /artplaces/:id
   def destroy
     @artplace.destroy
     head :no_content
