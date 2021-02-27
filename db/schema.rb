@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20210227162249) do
     t.string   "Location"
     t.string   "urlPic"
     t.string   "budget"
-    t.text     "descirption"
+    t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

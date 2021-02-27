@@ -4,7 +4,7 @@ class CreateArtPlaces < ActiveRecord::Migration[5.0]
       t.string :Location
       t.string :urlPic
       t.string :budget
-      t.text :descirption
+      t.text :description
 
       t.timestamps
     end
