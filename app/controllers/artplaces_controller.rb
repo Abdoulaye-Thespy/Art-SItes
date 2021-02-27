@@ -1,11 +1,11 @@
 # app/controllers/artplace_controller.rb
-class ArtPlacesController < ApplicationController
+class ArtplacesController < ApplicationController
   before_action :set_artplace, only: [:show, :update, :destroy]
 
   # GET /artplaces
   def index
     @artplaces = ArtPlace.all
-    json_response(@artplaces)
+    render json:  @artplaces.to_json
   end
 
   # POST /artplaces
