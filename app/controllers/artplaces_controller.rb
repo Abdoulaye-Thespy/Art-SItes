@@ -16,7 +16,7 @@ class ArtplacesController < ApplicationController
 
   # GET /artplaces/:id
   def show
-    json_response(@artplace)
+    render json: @artplace.to_json
   end
 
   # PUT /artplaces/:id
@@ -39,6 +39,6 @@ class ArtplacesController < ApplicationController
   end
 
   def set_artplace
-    @artplace = artplace_params.find(params[:id])
+    @artplace = ArtPlace.find(params[:id])
   end
 end
