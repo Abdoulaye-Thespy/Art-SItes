@@ -5,7 +5,7 @@ class ArtplacesController < ApplicationController
   # GET /artplaces
   def index
     @artplaces = ArtPlace.all
-    render json:  @artplaces.to_json
+    render json:  {Status: 'success',  data: @artplaces}
   end
 
   # POST /artplaces
@@ -16,7 +16,7 @@ class ArtplacesController < ApplicationController
 
   # GET /artplaces/:id
   def show
-    render json: @artplace.to_json
+     render json:  {Status: 'success',  data: @artplace}
   end
 
   # PUT /artplaces/:id
